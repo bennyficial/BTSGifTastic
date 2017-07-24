@@ -12,7 +12,7 @@ var topics = ["Goku","Vegeta","Gohan","Trunks", "Goten", "Frieza"];
       	// Create var to stor the data-name of the button you click
         var topics = $(this).attr("data-name");
         // Call the search depending on the name of the topic button clicked
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topics + "&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topics + "&api_key=dc6zaTOxFJmzC&limit=10";
         // Make ajax call
 		$.ajax({
           url: queryURL,
