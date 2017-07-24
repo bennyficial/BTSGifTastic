@@ -1,0 +1,19 @@
+body {
+	background-color: black;
+}
+
+label,
+h1,
+p {
+	color: white;
+	
+}
+
+h1 {
+	text-align: center;
+}
+
+
+.topicButton {
+	margin: 7px;
+}
