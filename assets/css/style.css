@@ -1,18 +1,21 @@
 body {
-	background-color: black;
+	
+	background-image: url("../images/bts.jpg");
+	height: 100%;
+	background-repeat: no-repeat;
+  	background-size: cover; 
 }
 
 label,
 h1,
 p {
 	color: white;
-	
+	text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
 }
 
 h1 {
 	text-align: center;
 }
-
 
 .topicButton {
 	margin: 7px;

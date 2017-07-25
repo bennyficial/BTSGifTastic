@@ -3,7 +3,7 @@ $(document).ready(function()
 {
 
 // Array of topics for the buttons
-var topics = ["Goku","Vegeta","Gohan","Trunks", "Goten", "Frieza"];
+var topics = ["BTS", "Rap Monster","Jin","Suga","J-Hope", "Jimin", "V", "Jungkook"];
 
 	
 	function displayGif() {
@@ -52,7 +52,7 @@ var topics = ["Goku","Vegeta","Gohan","Trunks", "Goten", "Frieza"];
 					var gifRating = results[i].rating;
 
 					// Use another var to create a p tag to show the ratings
-					var gifRatingText = $("<p>").text("Ratings: " + gifRating);
+					var gifRatingText = $("<p>").text("Rating: " + gifRating);
 					// Add the ratings textg to the subDiv
 					subDiv.append(gifRatingText);
 					// Add the subDiv to the topicDiv
@@ -109,6 +109,12 @@ var topics = ["Goku","Vegeta","Gohan","Trunks", "Goten", "Frieza"];
 		event.preventDefault();
 		// Use a var to store the user input
 		var newGif = $("#topicInput").val().trim();
+				// Prevents adding the new button if there is no input
+				if (newGif === ""){
+                alert("No topic entered. Please try a new search!");
+                location.reload();
+            	}
+
 		// Push the user input into topics array
 		topics.push(newGif);
 		// run the renderButtons function
