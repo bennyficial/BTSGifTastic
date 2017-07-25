@@ -17,7 +17,7 @@ var topics = ["BTS", "Rap Monster","Jin","Suga","J-Hope", "Jimin", "V", "Jungkoo
 		$.ajax({
           url: queryURL,
           method: "GET"
-     }).done(function(response) {
+     	}).done(function(response) {
      		// Store the response.data in a var
      		var results = response.data;
      		// Call the following gifPlay function
@@ -50,7 +50,6 @@ var topics = ["BTS", "Rap Monster","Jin","Suga","J-Hope", "Jimin", "V", "Jungkoo
 					subDiv.append(image);
 					// Use a var to store the rantings
 					var gifRating = results[i].rating;
-
 					// Use another var to create a p tag to show the ratings
 					var gifRatingText = $("<p>").text("Rating: " + gifRating);
 					// Add the ratings textg to the subDiv
@@ -59,11 +58,11 @@ var topics = ["BTS", "Rap Monster","Jin","Suga","J-Hope", "Jimin", "V", "Jungkoo
 					topicDiv.append(subDiv);
 					// Add the topicDiv to the stage
 					$("#gifStage").append(topicDiv);
-     			}
+ 					}
      		}
 
-     		})
- }
+ 		})
+ 	}
 		
 	function swapGif() {
 				// Use a var to store the tochangestate of button clicked
@@ -85,8 +84,6 @@ var topics = ["BTS", "Rap Monster","Jin","Suga","J-Hope", "Jimin", "V", "Jungkoo
 					$(this).attr("data-tochangestate", "stillstring");
 					};	
 		}
-
-
 
 	function renderButtons(){
 		// Empties the topcisView div
